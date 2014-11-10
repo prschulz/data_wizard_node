@@ -1,17 +1,59 @@
 <% include partials/header %>
-<div class="col-xs-12 text-center">
-  <div id="chart"></div>
+<div class="container">
+<div class="divider">
+
+</div>
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3 text-center">
+    <div id="dataTable"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2 text-center">
+    <div id="chart"></div>
+  </div>
+</div>
+
 </div>
 <script>
-  var chart = c3.generate({
-    bindto: '#chart',
+var chart = c3.generate({
     data: {
-      columns: [
-        ['data1', 30, 200, 100, 400, 150, 250],
-        ['data2', 50, 20, 10, 40, 15, 25]
-      ]
-    }
+        columns: [
+            ['data1', 30, 20, 50, 40, 60, 50],
+            ['data2', 200, 130, 90, 240, 130, 220],
+            ['data3', 300, 200, 160, 400, 250, 250],
+            ['data4', 200, 130, 90, 240, 130, 220],
+            ['data5', 130, 120, 150, 140, 160, 150],
+        ],
+        type: 'bar',
+        groups: [
+            ['data1','data2']
+        ]
+    },
+    color: {
+          pattern: ['#035AA6', '#0477BF', '#048ABF', '#72C5D9','#5FA2A6']
+        }
 });
+
+// handsontable test
+
+ var data = [
+    ['=$B$2', "Maserati", "Mazda", "Mercedes", "Mini", "=A$1"],
+    [2009, 0, 2941, 4303, 354, 5814],
+    [2010, 5, 2905, 2867, '=SUM(A4,2,3)', '=$B1'],
+    [2011, 4, 2517, 4822, 552, 6127],
+    [2012, '=SUM(A2:A5)', '=SUM(B5,E3)', '=A2/B2', 12, 4151]
+  ];
+
+  $('#dataTable').handsontable({
+    data: data,
+    colHeaders: true,
+    rowHeaders: true,
+    formulas: true,
+    minSpareRows: 1,
+  });
+
 
 </script>
 
