@@ -1,17 +1,22 @@
 <% include partials/header %>
 <div class="container">
-<div class="divider">
+<header>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4 text-center">
+      <h2>Data <img src="/images/hat.svg" alt="Data Wizard" id="logo"> Wizard</h2>
+    </div>
+  </div>
+</header>
 
-</div>
 <div class="row">
   <div class="col-xs-6 text-center">
-    <h2>Load Data</h2>
-    <hr>
+    <h3 class="title">Load Data</h3>
+    <br>
     <div id="dataTable"></div>
   </div>
   <div class="col-xs-6 text-center">
-    <h2>Chart Options</h2>
-    <hr>
+    <h3 class="title">Chart Options</h3>
+    <br>
 
     <div class="row">
       <!-- chart type input -->
@@ -37,10 +42,13 @@
           <option value="tech-office">Tech Office</option>
           <option value="dusty-petrol">Dusty Petrol</option>
         </select>
-      </div>
+      </div><!-- end color picker div -->
+    </div><!-- end first row of chart options -->
+    <div class="row">
+
     </div>
-  </div>
-</div>
+  </div> <!-- end chart options div -->
+</div> <!-- end row for datatable and chart options -->
 
 <hr>
 

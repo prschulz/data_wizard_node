@@ -1,7 +1,23 @@
-.divider {
-  padding-top: 50px;
+header{
+  height: 100px;
+  padding-top: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+body{
+
 }
 
 .option-title{
   border-bottom: 1px solid #999;
+}
+
+.title{
+  border-bottom: 1px solid #333;
+  font-weight: 400;
+}
+
+#logo{
+  width: 65px;
+  height: 65px;
 }

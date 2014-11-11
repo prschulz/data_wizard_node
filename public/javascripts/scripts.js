@@ -2,6 +2,7 @@
 
 // handsontable test
 
+//seed data
 var data = [
   ["2008", 10, 11, 12, 13],
   ["2009", 20, 11, 14, 13],
@@ -38,10 +39,12 @@ var chartGen = function (data) {
     });
 };
 
+//function to refresh chart on user action
 var refreshChart = function () {
     chartGen(data);
 };
 
+//color palette function to choose chart color scheme
 var colorPalette = function (color) {
     switch(color){
         case "salmon":
@@ -71,3 +74,4 @@ chartGen(data);
 
 //add selectordie styling to all dropdowns
 $("select").selectOrDie();
+
