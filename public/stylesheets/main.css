@@ -1,3 +1,7 @@
 .divider {
   padding-top: 50px;
 }
+
+.option-title{
+  border-bottom: 1px solid #999;
+}

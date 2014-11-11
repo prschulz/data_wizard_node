@@ -4,10 +4,45 @@
 
 </div>
 <div class="row">
-  <div class="col-xs-6 col-xs-offset-3 text-center">
+  <div class="col-xs-6 text-center">
+    <h2>Load Data</h2>
+    <hr>
     <div id="dataTable"></div>
   </div>
+  <div class="col-xs-6 text-center">
+    <h2>Chart Options</h2>
+    <hr>
+
+    <div class="row">
+      <!-- chart type input -->
+      <div class="col-xs-6 text-center">
+        <p class="lead option-title">Chart Type</p>
+        <select name="chart-type" id="chart-type">
+          <option value="bar">Bar Graph</option>
+          <option value="line">Line Chart</option>
+          <option value="spline">Spline Chart</option>
+          <option value="pie">Pie Chart</option>
+          <option value="area-spline">Area Chart</option>
+          <option value="donut">Donut Chart</option>
+        </select>
+      </div>
+      <!-- color picker  -->
+      <div class="col-xs-6 text-center">
+        <p class="lead option-title">Color Palette</p>
+        <select name="color-palette" id="color-palette">
+          <option value="circus">Circus</option>
+          <option value="odd">Odd</option>
+          <option value="sea-wolf">Sea Wolf</option>
+          <option value="tech-office">Tech Office</option>
+          <option value="5">Area Chart</option>
+          <option value="5">Donut Chart</option>
+        </select>
+      </div>
+    </div>
+  </div>
 </div>
+
+<hr>
 
 <div class="row">
   <div class="col-xs-8 col-xs-offset-2 text-center">
@@ -16,45 +51,6 @@
 </div>
 
 </div>
-<script>
-var chart = c3.generate({
-    data: {
-        columns: [
-            ['data1', 30, 20, 50, 40, 60, 50],
-            ['data2', 200, 130, 90, 240, 130, 220],
-            ['data3', 300, 200, 160, 400, 250, 250],
-            ['data4', 200, 130, 90, 240, 130, 220],
-            ['data5', 130, 120, 150, 140, 160, 150],
-        ],
-        type: 'bar',
-        groups: [
-            ['data1','data2']
-        ]
-    },
-    color: {
-          pattern: ['#035AA6', '#0477BF', '#048ABF', '#72C5D9','#5FA2A6']
-        }
-});
-
-// handsontable test
-
- var data = [
-    ['=$B$2', "Maserati", "Mazda", "Mercedes", "Mini", "=A$1"],
-    [2009, 0, 2941, 4303, 354, 5814],
-    [2010, 5, 2905, 2867, '=SUM(A4,2,3)', '=$B1'],
-    [2011, 4, 2517, 4822, 552, 6127],
-    [2012, '=SUM(A2:A5)', '=SUM(B5,E3)', '=A2/B2', 12, 4151]
-  ];
-
-  $('#dataTable').handsontable({
-    data: data,
-    colHeaders: true,
-    rowHeaders: true,
-    formulas: true,
-    minSpareRows: 1,
-  });
-
-
-</script>
+<script src="/javascripts/scripts.js"></script>
 
 <% include partials/footer %>
