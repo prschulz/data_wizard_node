@@ -5,7 +5,9 @@
 var data = [
   ["2008", 10, 11, 12, 13],
   ["2009", 20, 11, 14, 13],
-  ["2010", 30, 15, 12, 13]
+  ["2010", 30, 15, 12, 13],
+  ["2011", 22, 25, 14, 7],
+  ["2012", 15, 20, 16, 20],
 ];
 
 var $container = $("#dataTable");
@@ -42,6 +44,8 @@ var refreshChart = function () {
 
 var colorPalette = function (color) {
     switch(color){
+        case "salmon":
+            return ['#FFE1A8', '#FF7F66', '#7ECEFD', '#2185C5','#3E454C'];
         case "circus":
             return ['#2E0927', '#D90000', '#FF2D00', '#FF8C00','#04756F'];
         case "odd":
@@ -49,10 +53,11 @@ var colorPalette = function (color) {
         case "sea-wolf":
             return ['#DC3522', '#D9CB9E', '#374140', '#2A2C2B','#1E1E20'];
         case "tech-office":
-            return ['#DC3522', '#D9CB9E', '#374140', '#2A2C2B','#1E1E20'];
-
+            return ['#595241', '#B8AE9C', '#ACCFCC', '#8A0917','#BBBBBB'];
+        case "dusty-petrol":
+            return ['#292929', '#5B7876', '#8F9E8B', '#F2E6B6','#412A22'];
         default:
-            return ['#2E0927', '#D90000', '#FF2D00', '#FF8C00','#04756F'];
+            return ['#FFE1A8', '#FF7F66', '#7ECEFD', '#2185C5','#3E454C'];
     }
 };
 
