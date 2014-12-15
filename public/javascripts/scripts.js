@@ -18,10 +18,10 @@ $container.handsontable({
     rowHeaders: true,
     formulas: true, //add formulas from rule.js
     afterChange: refreshChart, //refresh chart when data is input
-    contextMenu: true, //adding clipboard
-    contextMenuCopyPaste: {
-    swfPath: "vendors/javascripts/ZeroClipboard.swf"
-  }
+    contextMenu: true //adding clipboard
+  //   contextMenuCopyPaste: {
+  //   swfPath: "vendors/javascripts/ZeroClipboard.swf"
+  // }
   });
 
 
