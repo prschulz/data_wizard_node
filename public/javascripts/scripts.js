@@ -41,6 +41,7 @@ var chartGen = function (data) {
 
 //function to refresh chart on user action
 var refreshChart = function () {
+    console.log("refresh hit!!!");
     chartGen(data);
 };
 
